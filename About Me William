@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>About Me</Title>
+</head>
+<body>
+		<h1 style="text-align:center;">About Me</h1>
+
+<p style="text-align:center;">My name is William Aitkens and I go to school at Merivale high school</p>
+
+		<h2 style="text-align:center;">Hobbies</h2>
+		
+<p style="text-align:center;">Some of my hobbies is playing sports like soccer and golf, playing video games, and going to school.</P>
+		
+		<Center><img src="https://www.visitscotland.com/cms-images/destinations/dumfries-and-galloway/gatehouse-golf-club?view=Standard" alt="some_text" style="width:580px;height:380px;">
+		<img src="http://sabisathletics.net/wp-content/uploads/2013/08/soccer-ball.jpg" alt="some_text" style="width:580px;height:380px;">
+		<img src="http://images.designntrend.com/data/images/full/89208/ps4-logo.jpg" alt="some_text" style="width:580px;height:380px;">
+		<img src="https://media.timeout.com/images/122739/image.jpg" alt="some_text" style="width:580px;height:380px;"></Center>
+		<a href="https://www.visitscotland.com/see-do/active/golf/">Golf Image</a>
+		<a href="https://sites.google.com/a/gaston.k12.nc.us/cmsladyeaglessoccer/">Soccer Image</a>
+		<a href="http://www.designntrend.com/articles/76482/20160520/playstation-neo-rumor-console-production-price-sony-new-ps4.htm">PS4 Image</a>
+		<a href="http://www.timeout.com/london/things-to-do/lidos-and-outdoor-swimming-pools-in-london">Swimming Image</a></Center>
+</body>
+
+
+<h1>
+</html>
