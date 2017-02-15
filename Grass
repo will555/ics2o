@@ -5,8 +5,29 @@
 </head>
 <body>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+  <center><h1>Installing Apps</h1></center>
+
+
+  <h2>Installing Steam</h2>
+  
+    <ol type="1">
+      <li>Turn on the computer and monitor</li>
+      <li>Open the internet browser</li>
+      <li>Search for steam on Internet Explorer</li>
+      <li>Go to the steam website</li>
+      <li>Click on download on the website and follow the steps provided</li>
+    </ol>  
+    
+  <h2>Installing Avast Antivirus</h2>
+  
+    <ol type="1">
+      <li>Turn on the computer and monitor</li>
+      <li>Open the internet browser</li>
+      <li>Search for Avast on Internet Explorer</li>
+      <li>Go to the Avast website</li>
+      <li>Click Download Free Antivirus</li>
+      <il>Follow the Three steps to download Avast</li>
+    </ol>
 
 </body>
 </html>
