@@ -5,27 +5,25 @@ function setup() {
 }
 
 function draw() {
-var roof= 41;
+var houseHight=134;
 
-var wall=133;
+var houseWidth=134;
+
+var houseY=100;
   
-var houseWidth=100;
+var houseX=100;
 
-fill(houseWidth+56,houseWidth*2, houseWidth+155);
-rect(139,houseWidth*2+9,wall,wall);
+fill(71, 169, 255);
+rect(houseX+39,houseY+109,houseWidth,houseHight);
 fill(0, 0, 0);
-rect(houseWidth+96,houseWidth*3-3,23,43);
+rect(houseX+96,houseY+198,houseWidth-111,houseHight-91);
 fill(255, 255, 255);
-rect(houseWidth*2,houseWidth*3+3,13,13);
-rect(houseWidth+60,houseWidth*2+40,30,30);
-rect(houseWidth*2+19,houseWidth*2+40,30,30);
+rect(houseX+100,houseY+203,houseWidth-121,houseHight-121);
+rect(houseX+60,houseY+140,houseWidth-104,houseHight-104);
+rect(houseX+119,houseY+141,houseWidth-104,houseHight-104);
 fill(130, 0, 0);
-triangle(300,212,205,124,110,211);
-fill(255, 255, 255);
-fill(42, 189, 51);
-line(207,302,207,315);
-line(215,309,201,309);
-fill(28, 201, 49);
+triangle(houseX+205,houseY+110,houseX+107,houseY+26,houseX+8,houseY+110);
+fill(32, 201, 52);
 ellipse(207,419,679,160);
 fill(255, 242, 0);
 ellipse(35,26,110,110);
