@@ -1,10 +1,15 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
 var houseHight=134;
 
 var houseWidth=134;
 var houseY=100;
 var houseX=100;
 
-var house = function () {
+function house() {
   fill(71, 169, 255);
 rect(houseX+38,houseY+109,houseWidth,houseHight);
 fill(0, 0, 0);
@@ -34,3 +39,4 @@ rect(houseX+-63,houseY+208,houseWidth-122,houseHight-122);
 rect(houseX+-35,houseY+208,houseWidth-122,houseHight-122);
 fill(130, 0, 0);
 triangle(houseX+2,houseY+194,houseX+-44,houseY+162,houseX+-86,houseY+195);
+}
