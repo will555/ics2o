@@ -8,7 +8,7 @@ var x = 0;
 // how far the ball moves every time
 var speed = 2;
 
-draw = function() {
+ function draw() {
     background(127, 204, 255);
     
     fill(66, 66, 66);
