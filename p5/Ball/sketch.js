@@ -1,15 +1,14 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(640, 480);
 }
 
-function draw() {
-  // position of the ball
+// position of the ball
 var y = 0;
 var x = 0;
 // how far the ball moves every time
 var speed = 2;
 
-draw = function() {
+ function draw() {
     background(127, 204, 255);
     
     fill(66, 66, 66);
@@ -33,6 +32,3 @@ draw = function() {
     }
 };
 
-
-
-}
