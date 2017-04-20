@@ -1,7 +1,6 @@
-function setup() {
-  createCanvas(400, 400);
-}
-
+/*William Aitkens
+BUG
+2017-04-20*/
 // position of the ball
 var y = 0;
 var x = 0;
@@ -9,17 +8,21 @@ var bugSize = 20;
 // how far the ball moves every time
 var speed = 2;
 
+function setup() {
+  createCanvas(400, 400);
+}
+
 function bug () {
 //Bug
-fill(36, 116, 255);
-rect(x+bugSize*-1.36,y+bugSize*1.41,32,11);
-rect(x+bugSize*1.86,y+bugSize*1.41,32,11);
-rect(x+bugSize*-1.36,y+bugSize*2.56,38,11);
-rect(x+bugSize*1.89,y+bugSize*2.45,32,11);
-fill(38, 0, 255);
-ellipse(x+bugSize*1.14,y+bugSize*2.05,54,57);
-ellipse(x+bugSize*1.14,y+bugSize*0.45,40,40);
-};
+  fill(36, 116, 255);
+  rect(x+bugSize*-1.36,y+bugSize*1.41,32,11);
+  rect(x+bugSize*1.86,y+bugSize*1.41,32,11);
+  rect(x+bugSize*-1.36,y+bugSize*2.56,38,11);
+  rect(x+bugSize*1.89,y+bugSize*2.45,32,11);
+  fill(38, 0, 255);
+  ellipse(x+bugSize*1.14,y+bugSize*2.05,54,57);
+  ellipse(x+bugSize*1.14,y+bugSize*0.45,40,40);
+}
 
 function draw() {
     background(127, 204, 255);
@@ -54,7 +57,7 @@ function draw() {
     rect(-20,-12,115,95,53);
     fill(0, 0, 0);
     text('BUG HOUSE',7,42);
-  
+  }
 function spray () {
     fill(204, 171, 171);
         triangle(mouseX+bugSize*-2.00,mouseY+bugSize*0.80,mouseX+bugSize*-2.00,mouseY+bugSize*-0.80,mouseX+bugSize*-0.05,mouseY+bugSize*0.15);
@@ -64,13 +67,14 @@ function spray () {
         rect(mouseX, mouseY+bugSize*-0.62, 35, 46,26);
     fill(255, 0, 0);
         rect(mouseX, mouseY+bugSize*0.78, 36, 75);
-  
-  if (mouseIsPressed){
+  }
+
+  function mousePressed() {
     spray();
 }
-};
 
-};
+
+
 
 
 
