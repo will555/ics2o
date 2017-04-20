@@ -5,7 +5,7 @@ var bugSize = 20;
 // how far the ball moves every time
 var speed = 2;
 
-var function bug () {
+function bug () {
 //Bug
 fill(36, 116, 255);
 rect(x+bugSize*-1.36,y+bugSize*1.41,32,11);
@@ -52,9 +52,9 @@ function draw() {
     text('BUG HOUSE',7,42);
 
 
+};
 
-
-var function spray () {
+function spray () {
     fill(204, 171, 171);
         triangle(mouseX+bugSize*-2.00,mouseY+bugSize*0.80,mouseX+bugSize*-2.00,mouseY+bugSize*-0.80,mouseX+bugSize*-0.05,mouseY+bugSize*0.15);
     fill(0, 0, 0);
@@ -64,7 +64,7 @@ var function spray () {
     fill(255, 0, 0);
         rect(mouseX, mouseY+bugSize*0.78, 36, 75);
 
-};
+
 
 if (mouseIsPressed){
     spray();
