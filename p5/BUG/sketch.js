@@ -17,7 +17,7 @@ ellipse(x+bugSize*1.14,y+bugSize*2.05,54,57);
 ellipse(x+bugSize*1.14,y+bugSize*0.45,40,40);
 };
 
-draw = function() {
+function draw() {
     background(127, 204, 255);
     bug();
    //move Bug
