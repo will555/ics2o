@@ -54,10 +54,7 @@ function draw() {
     rect(-20,-12,115,95,53);
     fill(0, 0, 0);
     text('BUG HOUSE',7,42);
-
-
-};
-
+  
 function spray () {
     fill(204, 171, 171);
         triangle(mouseX+bugSize*-2.00,mouseY+bugSize*0.80,mouseX+bugSize*-2.00,mouseY+bugSize*-0.80,mouseX+bugSize*-0.05,mouseY+bugSize*0.15);
@@ -67,11 +64,17 @@ function spray () {
         rect(mouseX, mouseY+bugSize*-0.62, 35, 46,26);
     fill(255, 0, 0);
         rect(mouseX, mouseY+bugSize*0.78, 36, 75);
-
-
-
-if (mouseIsPressed){
+  
+  if (mouseIsPressed){
     spray();
 }
 };
+
+};
+
+
+
+
+
+
 
