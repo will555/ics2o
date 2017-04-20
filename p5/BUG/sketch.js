@@ -1,3 +1,7 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
 // position of the ball
 var y = 0;
 var x = 0;
