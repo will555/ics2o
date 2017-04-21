@@ -48,7 +48,10 @@ function draw() {
     if (x > 400) {
         speed = -2;
     }
-   
+    if (mousePressed) {
+      spray();
+    }
+  
     fill(196, 164, 164);
     rect(334,338,54,54,23);
     fill(0, 0, 0);
