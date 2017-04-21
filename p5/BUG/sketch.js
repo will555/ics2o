@@ -48,7 +48,7 @@ function draw() {
     if (x > 400) {
         speed = -2;
     }
-    if (mousePressed) {
+    if (mouseIsPressed) {
       spray();
     }
   
