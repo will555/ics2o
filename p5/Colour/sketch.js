@@ -21,7 +21,24 @@ function draw() {
 }
 
 function keyPressed() {
-   
+   if (keyCode == RIGHT_ARROW) {
+		colour = colour + 5;
+	}
+	else if (keyCode == LEFT_ARROW) {
+		colour2 = colour2 + 5;
+	}
+	else if (keyCode == UP_ARROW) {
+		colour3 = colour3 + 5;
+	}
+	else if (keyCode == DOWN_ARROW) {
+		 colour = 0;
+      colour2 = 0;
+      colour3 = 0;  
+	}
+  return false;
+} 
+  
+/*
 if (keyIsPressed && keyCode === 38) {
       colour = colour + 5;
     }
@@ -36,5 +53,3 @@ if (keyIsPressed && keyCode === 40) {
       colour2 = 0;
       colour3 = 0;  
     }
-  return false;
-}
