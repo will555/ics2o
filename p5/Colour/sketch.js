@@ -21,6 +21,11 @@ if (keyIsDown(37)) {
 if (keyIsDown(39)) {
       colour3 = colour3 + 5;
     }
+if (keyIsDown(40)) {
+      colour = 0;
+      colour2 = 0;
+      colour3 = 0;
+    }
  if (keyIsDown(87)) {
       colour = colour - 5;
     }
