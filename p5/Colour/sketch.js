@@ -15,7 +15,7 @@ background(194, 194, 194);
 if (keyIsDown(87)) {
       colour = colour + 5;
     }
-if keyIsDown(65)) {
+if (keyIsDown(65)) {
       colour2 = colour2 + 5;
     }
 if (keyIsDown(68)) {
