@@ -1,11 +1,11 @@
 /*Will
 Colour
 25-4-2017*/
-var y = 0;
+  var y = 0;
 var x = 0;
-var bugSize = 20;
+  var bugSize = 20;
 var colour = 0;
-var colour2 = 0;
+  var colour2 = 0;
 var colour3 = 0;
 
   function setup() {
@@ -15,7 +15,7 @@ var colour3 = 0;
 
 
 var draw=function () {
-background(194, 194, 194);
+    background(194, 194, 194);
 if (keyIsPressed && keyCode === 38) {
       colour = colour + 5;
     }
@@ -31,8 +31,8 @@ if (keyIsPressed && keyCode === 40) {
       colour3 = 0;
     }
 
-fill(colour, colour2, colour3);
-  rect(100,100,200,200,29);
+  fill(colour, colour2, colour3);
+    rect(100,100,200,200,29);
   textSize(23);
-  text("Make Your Favorite Colour",62,66);
+    text("Make Your Favorite Colour",62,66);
 };
