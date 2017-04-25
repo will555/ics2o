@@ -9,7 +9,7 @@ var colour = 0;
 var colour3 = 0;
 
   function setup() {
-  createCanvas(640, 480);
+  createCanvas(400, 400);
 }
 
 
@@ -35,4 +35,5 @@ if (keyIsPressed && keyCode === 40) {
     rect(100,100,200,200,29);
   textSize(23);
     text("Make Your Favorite Colour",62,66);
+  return false;
 };
