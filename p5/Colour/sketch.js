@@ -18,22 +18,26 @@ var draw=function () {
     background(194, 194, 194);
 if (keyIsPressed && keyCode === 38) {
       colour = colour + 5;
+  return false;
     }
 if (keyIsPressed && keyCode === 37) {
       colour2 = colour2 + 5;
+  return false;
     }
 if (keyIsPressed && keyCode === 39) {
       colour3 = colour3 + 5;
+  return false;
     }
 if (keyIsPressed && keyCode === 40) {
       colour = 0;
       colour2 = 0;
-      colour3 = 0;
+      colour3 = 0;  
+  return false;
     }
 
   fill(colour, colour2, colour3);
     rect(100,100,200,200,29);
   textSize(23);
     text("Make Your Favorite Colour",62,66);
-  return false;
+
 };
