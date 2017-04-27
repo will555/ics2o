@@ -61,22 +61,21 @@ function draw() {
     fill(0, 0, 0);
     text('BUG HOUSE',7,42);
   }
-//the spry bottle
+//the spray bottle
 function spray () {
     fill(204, 171, 171);
+  //the liquid spray
         triangle(mouseX+bugSize*-2.00,mouseY+bugSize*0.80,mouseX+bugSize*-2.00,mouseY+bugSize*-0.80,mouseX+bugSize*-0.05,mouseY+bugSize*0.15);
     fill(0, 0, 0);
+  //the nozzle of the bottle
         rect(mouseX+bugSize*-0.60, mouseY+bugSize*-0.10, 13, 8);
     fill(230, 230, 230);
+  //the top of the bottle
         rect(mouseX, mouseY+bugSize*-0.62, 35, 46,26);
     fill(255, 0, 0);
+  //the can part of the bottle, the body
         rect(mouseX, mouseY+bugSize*0.78, 36, 75);
   }
-
-  function mousePressed() {
-    spray();
-}
-
 
 
 
