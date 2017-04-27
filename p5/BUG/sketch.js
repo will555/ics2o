@@ -42,8 +42,8 @@ function draw() {
         speed =-2;
        } 
    //changes the speed of the bug if the mouse is pressed
-      else if (mouseIsPressed) {
-            speed =-4;
+       else if (mouseIsPressed) {
+            speed = speed -1;
         }
    //stops the bug from moving off the screen
     if (y < 0) {
