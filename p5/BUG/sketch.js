@@ -1,11 +1,11 @@
 /*William Aitkens
 BUG
 2017-04-20*/
-// position of the ball
+// position of the BUG
 var y = 0;
 var x = 0;
 var bugSize = 20;
-// how far the ball moves every time
+// how far the BUG moves every time
 var speed = 2;
 
 function setup() {
@@ -61,6 +61,7 @@ function draw() {
     fill(0, 0, 0);
     text('BUG HOUSE',7,42);
   }
+//the spry bottle
 function spray () {
     fill(204, 171, 171);
         triangle(mouseX+bugSize*-2.00,mouseY+bugSize*0.80,mouseX+bugSize*-2.00,mouseY+bugSize*-0.80,mouseX+bugSize*-0.05,mouseY+bugSize*0.15);
