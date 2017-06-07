@@ -69,16 +69,17 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
     
 } 
 
-if (lazerY >= x - targetSize/2 && lazerY <= x + targetSize/2 && mouseX >= x - targetSize/2 && mouseX <= x + targetSize/2 ) {
+if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2 ) {
     
-    x = 0 - targetSize;    
+    x = 0 - targetSize;  
+    targetSize = random(50,125);
     y = y = random(100,300);
 }
 
 
 fill(0, 0, 0);
 text("Score:",730,35);
-    text(score,770,35);    
+text(score,770,35);    
 };
 
 };
