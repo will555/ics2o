@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>Traffic Lights</Title>
+		<link rel="stylesheet" href="Ant Style.css">
+		<link rel="icon" type="image/png" href="https://d30y9cdsu7xlg0.cloudfront.net/png/7803-200.png">
+</head>
+<body>
+
+		<h1>Traffic Lights</h1>
+
+		
+<ul>
+	<li>Light A is green while Light B is red</li>
+	<li>Light A is green for 35 seconds, then Light A turns yellow while Light B is still red</li>
+	<li>Light A is yellow for 3 seconds then turns red while Light B is still red</li>
+	<li>Light A and Light B are both red for 2 secconds then Light B turns green for 35 seconds while Light A stays red</li>
+	<li>Light B is green for 35 seconds then it turns yellow for 3 seconds and finally red, Light A is still red</li>
+	<li>Light B is red for 2 seconds and then Light A turns green</li>
+	<li>It then resets</li>
+</ul>
+		
+		<h2>Code</h2>	
+						
+<pre>
+<p>int LEDRed = 13; //NS red light 
+int LEDYellow =12 ; //NS yellow ligh
+int LEDGreen =11 ; //NS green light
+int LEDRed2 =7 ; //EW red light
+int LEDYellow2 =6 ; //EW yellow light
+int LEDGreen2 =5 ; //EW green light
+
+void setup() {
+ pinMode (LEDRed, OUTPUT);
+ pinMode (LEDYellow, OUTPUT);
+ pinMode (LEDGreen, OUTPUT);
+ pinMode (LEDRed2, OUTPUT);
+ pinMode (LEDYellow2, OUTPUT);
+ pinMode (LEDGreen2, OUTPUT);    
+}
+void loop() {  
+  digitalWrite(LEDRed2, HIGH);//turns on EW red light
+  digitalWrite(LEDGreen, HIGH);//turns on NS green light
+    delay(10000);//makes the light on for 10 sec 
+  digitalWrite(LEDGreen, LOW);//turns off NS green light
+  digitalWrite(LEDYellow, HIGH);//turns on NS yellow light
+    delay(3000);//makes the light on for 3 sec
+  digitalWrite(LEDYellow, LOW);//turns off NS yellow light
+  digitalWrite(LEDRed, HIGH);//turns on NS red light
+    delay(2000);//makes the light on for 2 sec
+  digitalWrite(LEDRed2, LOW);//turns off EW red light
+  digitalWrite(LEDGreen2, HIGH);//turns on EW green light
+    delay(10000);//makes the light on for 10 sec
+  digitalWrite(LEDGreen2, LOW);//turns off EW green light
+  digitalWrite(LEDYellow2, HIGH);//turns on EW yellow light
+    delay(3000);//makes the light on for 3 sec
+  digitalWrite(LEDYellow2, LOW);//turns off EW yellow light
+  digitalWrite(LEDRed2, HIGH);//turns on EW red
+    delay(2000);//makes the light on for 2 sec
+  digitalWrite(LEDRed, LOW);//turns off NS red light
+} 
+</p>					
+</pre>		
+<center><div class="container">
+			<img src="https://i.cbc.ca/1.2427414.1384535032!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/walk-traffic-light-signal.jpg"alt="Avatar" class="image">
+			<div class="overlay">
+			<div class="text""font-family:arial;"style="color:white;"><a href="http://www.cbc.ca/news/canada/ottawa/walk-ottawa-wants-changes-to-city-intersections-1.2427365">Image</a></div>
+			</div>
+			</div>				
+		<h2>Traffic Light Essay</h2>	
+<p>
+Traffic lights are very helpful in everyday life to drivers and pedestrians, the timing of the lights have 
+been fine tuned for each road that they are on. It would be very hard for people to get around without traffic 
+lights. Traffic lights in different places are different and even the ones in canada and more specifically Ontario 
+are different, with some having different properties. The pedestrian lights are also different and have different 
+functions and properties.
+<br> <br>
+The major reason why traffic lights are so helpful is because it makes traffic run a lot more smoothly and lower 
+the chance of accidents. Before there were traffic lights there was a police officer who had to control the movement
+of traffic. This was difficult for police officers since they couldn’t handle changing the light of two different 
+lanes. Traffic lights are now much faster than using police officers and is much safer for the cars and pedestrians. 
+With the yellow light it also helps drivers even more since they can now have a better understanding for when to stop. 
+Without traffic lights it would be much harder for people to get places and there would be more accidents.  
+<br> <br>
+There are a lot of traffic lights around the world and most of them are not the same. Some are vertical, horizontal, 
+big, and small. Although they may look different they generally do the same thing with the same three lights and colours.
+The biggest difference of traffic lights in Canada are the traffic lights in Quebec. These traffic lights are horizontal 
+and a big difference for driving is that you are allowed to turn right on a red lights. There also always four lights and 
+the two end lights are red and the two middle lights are green and yellow. The pedestrian lights are also
+different all around the world with all different art styles.
+<br> <br>
+The traffic lights in Ottawa have different properties like flashing green for left turns, walk/don't walk 
+signals, and pedestrian buttons. When there is a flashing green light it tells drivers who are turning, and
+green flashing lights also mean green arrow. Walk/don’t walk signals are there to tell the pedestrians 
+when to walk and when to not walk. These lights work with the main red, yellow, and green traffic lights 
+to make sure that it is safe for the pedestrians to walk. The way the walk/dont walk lights know there is 
+a person there is by having pedestrian buttons. These buttons allow the pedestrians to walk when they need to and make
+the lights change faster than they normally would. The last property I will talk about are traffic light sensors. These
+sensors allow the traffic lights to sense when there is a car in a certain position. Having these sensors allow traffic
+to run more smoothly and make it so someone is not waiting for a traffic light to turn green when no one is there.
+<br> <br>
+Even though traffic lights are not perfect they are very beneficial to the movement and safety of drivers, 
+and without these light there could be a lot more accident and even deaths.
+</p>
+<center><div class="container">
+			<img src="https://i.cbc.ca/1.2427414.1384535032!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/walk-traffic-light-signal.jpg"alt="Avatar" class="image">
+			<div class="overlay">
+			<div class="text""font-family:arial;"style="color:white;"><a href="http://www.cbc.ca/news/canada/ottawa/walk-ottawa-wants-changes-to-city-intersections-1.2427365">Image</a></div>
+			</div>
+			</div>									
+</body>
+</html>
