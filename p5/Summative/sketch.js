@@ -12,7 +12,8 @@ var score = 0;
 var gunX = 200;
 var lazerY = 256;
 var lazerS = -45;
-
+var lives = 3;
+	
     function lazer() {
     fill(255, 0, 0);
    rect(mouseX+10,lazerY,10,94,30); 
@@ -61,25 +62,41 @@ fill(255, 208, 0);
     if (x > 900) {
         x = -100;
         y = random(100,300);
+      lives = lives -1;
     }
     
 if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) { 
    
    score = score + 1;
-    
-} 
-
-if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2 ) {
-    
-    x = 0 - targetSize;  
+    x = 0 - targetSize;
     targetSize = random(50,125);
-    y = y = random(100,300);
-}
+    speed = random(3, 10);
+    y = y = random(100,300); 
+} 
 
 
 fill(0, 0, 0);
 text("Score:",730,35);
-text(score,770,35);    
+text(score,770,35); 
+text("lives:",20,35);
+text(lives,50,35);
+	
+if (lives <= 0) {
+    fill(255, 255, 255);
+    rect(0,0,400,400);
+    fill(255, 0, 0);
+    textSize(65);
+    text("Game over",32,141);
+    fill(0, 0, 0);
+    textSize(40);
+    text("Score:",108,265);
+    text(score,239,265); 
+    fill(255, 0, 0);
+    rect(128,305,125,50);
+    fill(0, 0, 0);
+    textSize(30);
+    text("Restart",143,340);
+}
 };
 
 };
