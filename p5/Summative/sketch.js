@@ -7,7 +7,7 @@ var x = 200;
 var y = 200;   
 var speed = random(2, 9);
 var targetSize = random(50,125);
-var x2 = 500;
+var x2 = 800;
 var y2 = 200;   
 var speed2 = random(2, 9);
 var targetSize2 = random(50,125);	
@@ -100,8 +100,8 @@ text(score,770,35);
 text("lives:",20,35);
 text(lives,50,35);
 	
-if (mouseIsPressed && mouseX > 328 && mouseX <453 && mouseY > 305 && mouseY < 355 && lives <=0){
-   lives = 50; 
+if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 355 && lives <=0){
+   lives = 3; 
    score = 0;
    speed = random(3, 10);
    textSize(12);
@@ -120,24 +120,23 @@ if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2
 }
 	
 if (lives <= 0) {
-    fill(255, 255, 255);
+    fill(59, 134, 255);
     rect(0,0,800,400);
     fill(255, 0, 0);
     textSize(65);
-    text("Game over",32,141);
+    text("Game over",220,141);
     fill(0, 0, 0);
     textSize(40);
-    text("Score:",300,265);
-    text(score,440,265); 
+    text("Score:",300,250);
+    text(score,430,250); 
     fill(255, 0, 0);
-    rect(128,305,325,50);
+    rect(300,305,175,50);
     fill(0, 0, 0);
     textSize(30);
-    text("Restart",343,340);
+    text("Restart",340,340);
     speed = 0;
     speed2 = 0;
 }
 };
 
 };
-
