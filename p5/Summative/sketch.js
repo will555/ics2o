@@ -9,18 +9,18 @@ var speed = random(2, 9);
 var targetSize = random(50,125);
 var x2 = 900;
 var y2 = 200;   
-var speed2 = random(2, 9);
+var speed2 = random(5, 10);
 var targetSize2 = random(50,125);	
 var x3 = -100;
 var y3 = 200;   
-var speed3 = random(2, 9);
+var speed3 = random(6, 15);
 var targetSize3 = random(50,125);
 var x4 = 900;
 var y4 = 200;   
-var speed4 = random(2, 9);
+var speed4 = random(8, 12);
 var targetSize4 = random(50,125);
 var sizeT = random(20-200);
-var score = 125;
+var score = 0;
 var gunX = 200;
 var lazerY = 256;
 var lazerS = -45;
@@ -143,6 +143,9 @@ if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 3
    lives = 3; 
    score = 0;
    speed = random(3, 10);
+   speed2 = random(5, 10);
+   speed3 = random(6, 15);
+   speed4 = random(8, 12);
    textSize(12);
 }
 	
@@ -178,7 +181,7 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
     score = score + 1;
     x4 = 1000 - targetSize4;
     targetSize4 = random(70,100);
-    speed4 = random(5, 10);
+    speed4 = random(8, 12);
     y4 = y4 = random(100,300);
 } 
 }
