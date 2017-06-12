@@ -7,6 +7,10 @@ var x = 200;
 var y = 200;   
 var speed = random(2, 9);
 var targetSize = random(50,125);
+var x2 = 500;
+var y2 = 200;   
+var speed2 = random(2, 9);
+var targetSize2 = random(50,125);	
 var sizeT = random(20-200);
 var score = 0;
 var gunX = 200;
@@ -35,6 +39,15 @@ var lives = 3;
         ellipse(x,y,targetSize/2.20,targetSize/-2.20);
     };
     
+    function target2() {
+    fill(0, 50, 255);fill(0, 50, 255);
+        ellipse(x2,y2,targetSize2,targetSize2);
+    fill(255, 255, 255);
+        ellipse(x2,y2,targetSize2/-1.38,targetSize2/1.38);
+    fill(0, 50, 255);
+        ellipse(x2,y2,targetSize2/2.20,targetSize2/-2.20);
+    };
+	
 draw = function() {
 
 background(148, 218, 255);//the sky
@@ -62,7 +75,13 @@ fill(255, 208, 0);
     if (x > 900) {
         x = -100;
         y = random(100,300);
-      lives = lives -1;
+        lives = lives -1;
+    }
+    
+    if (x2 < -100) {
+        x2 = 500;
+        y2 = random(100,300);
+        lives = lives -1;
     }
     
 if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) { 
@@ -81,6 +100,24 @@ text(score,770,35);
 text("lives:",20,35);
 text(lives,50,35);
 	
+if (mouseIsPressed && mouseX > 128 && mouseX <253 && mouseY > 305 && mouseY < 355 && lives <=0){
+   lives = 50; 
+   score = 0;
+   speed = random(3, 10);
+}
+	
+if (score >= 20){   
+ target2();
+   x2 = x2 - speed2;//move the target
+if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {    
+    score = score + 1;
+    x2 = 0 - targetSize2;
+    targetSize2 = random(50,100);
+    speed2 = random(5, 12);
+    y2 = y2 = random(100,300);
+} 
+}
+	
 if (lives <= 0) {
     fill(255, 255, 255);
     rect(0,0,400,400);
@@ -96,6 +133,8 @@ if (lives <= 0) {
     fill(0, 0, 0);
     textSize(30);
     text("Restart",143,340);
+    speed = 0;
+    speed2 = 0;
 }
 };
 
