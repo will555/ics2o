@@ -104,6 +104,7 @@ if (mouseIsPressed && mouseX > 128 && mouseX <253 && mouseY > 305 && mouseY < 35
    lives = 50; 
    score = 0;
    speed = random(3, 10);
+   textSize(12);
 }
 	
 if (score >= 20){   
@@ -120,19 +121,19 @@ if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2
 	
 if (lives <= 0) {
     fill(255, 255, 255);
-    rect(0,0,400,400);
+    rect(0,0,800,400);
     fill(255, 0, 0);
     textSize(65);
     text("Game over",32,141);
     fill(0, 0, 0);
     textSize(40);
-    text("Score:",108,265);
-    text(score,239,265); 
+    text("Score:",300,265);
+    text(score,440,265); 
     fill(255, 0, 0);
-    rect(128,305,125,50);
+    rect(128,305,325,50);
     fill(0, 0, 0);
     textSize(30);
-    text("Restart",143,340);
+    text("Restart",343,340);
     speed = 0;
     speed2 = 0;
 }
