@@ -7,16 +7,27 @@ var x = 200;
 var y = 200;   
 var speed = random(2, 9);
 var targetSize = random(50,125);
-var x2 = 800;
+var x2 = 900;
 var y2 = 200;   
 var speed2 = random(2, 9);
 var targetSize2 = random(50,125);	
+var x3 = -100;
+var y3 = 200;   
+var speed3 = random(2, 9);
+var targetSize3 = random(50,125);
+var x4 = 900;
+var y4 = 200;   
+var speed4 = random(2, 9);
+var targetSize4 = random(50,125);
 var sizeT = random(20-200);
-var score = 0;
+var score = 125;
 var gunX = 200;
 var lazerY = 256;
 var lazerS = -45;
 var lives = 3;
+
+
+
 	
     function lazer() {
     fill(255, 0, 0);
@@ -46,6 +57,24 @@ var lives = 3;
         ellipse(x2,y2,targetSize2/-1.38,targetSize2/1.38);
     fill(0, 50, 255);
         ellipse(x2,y2,targetSize2/2.20,targetSize2/-2.20);
+    };
+	
+	function target3() {
+    fill(255, 0, 255);
+        ellipse(x3,y3,targetSize3,targetSize3);
+    fill(255, 255, 255);
+        ellipse(x3,y3,targetSize3/-1.38,targetSize3/1.38);
+    fill(255, 0, 255);
+        ellipse(x3,y3,targetSize3/2.20,targetSize3/-2.20);
+    };
+	
+		function target4() {
+    fill(255, 94, 0);
+        ellipse(x4,y4,targetSize4,targetSize4);
+    fill(255, 255, 255);
+        ellipse(x4,y4,targetSize4/-1.38,targetSize4/1.38);
+    fill(255, 94, 0);
+        ellipse(x4,y4,targetSize4/2.20,targetSize4/-2.20);
     };
 	
 draw = function() {
@@ -79,13 +108,23 @@ fill(255, 208, 0);
     }
     
     if (x2 < -100) {
-        x2 = 900;
+        x2 = 900 + targetSize2;
         y2 = random(100,300);
         lives = lives -1;
     }
     
-if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) { 
-   
+	if (x3 > 900) {
+        x3 = -100;
+        y3 = random(100,300);
+        lives = lives -1;
+    }
+	
+	if (x4 < -100) {
+        x4 = 900 + targetSize4;
+        y4 = random(100,300);
+        lives = lives -1;
+    }
+if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) {  
    score = score + 1;
     x = 0 - targetSize;
     targetSize = random(50,125);
@@ -112,12 +151,38 @@ if (score >= 20){
    x2 = x2 - speed2;//move the target
 if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {    
     score = score + 1;
-    x2 = 900 - targetSize2;
-    targetSize2 = random(50,100);
-    speed2 = random(5, 12);
+    x2 = 1000 - targetSize2;
+    targetSize2 = random(70,100);
+    speed2 = random(5, 10);
     y2 = y2 = random(100,300);
 } 
 }
+
+	
+if (score >= 80){   
+ target3();
+   x3 = x3 + speed3;//move the target
+if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2 && mouseY > y3 - targetSize3/2 && mouseY < y3 + targetSize3/2) {    
+    score = score + 1;
+    x3 = 0 - targetSize3;
+    targetSize3 = random(50,75);
+    speed3 = random(6, 15);
+    y3 = y3 = random(100,300);
+} 
+}
+
+if (score >= 125){   
+ target4();
+   x4 = x4 - speed4;//move the target
+if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
+    score = score + 1;
+    x4 = 1000 - targetSize4;
+    targetSize4 = random(70,100);
+    speed4 = random(5, 10);
+    y4 = y4 = random(100,300);
+} 
+}
+
 	
 if (lives <= 0) {
     fill(59, 134, 255);
@@ -136,6 +201,8 @@ if (lives <= 0) {
     text("Restart",340,340);
     speed = 0;
     speed2 = 0;
+	x = 200;
+	x2 = 900;
 }
 };
 
