@@ -79,7 +79,7 @@ fill(255, 208, 0);
     }
     
     if (x2 < -100) {
-        x2 = 500;
+        x2 = 900;
         y2 = random(100,300);
         lives = lives -1;
     }
@@ -100,7 +100,7 @@ text(score,770,35);
 text("lives:",20,35);
 text(lives,50,35);
 	
-if (mouseIsPressed && mouseX > 128 && mouseX <253 && mouseY > 305 && mouseY < 355 && lives <=0){
+if (mouseIsPressed && mouseX > 328 && mouseX <453 && mouseY > 305 && mouseY < 355 && lives <=0){
    lives = 50; 
    score = 0;
    speed = random(3, 10);
@@ -112,7 +112,7 @@ if (score >= 20){
    x2 = x2 - speed2;//move the target
 if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {    
     score = score + 1;
-    x2 = 0 - targetSize2;
+    x2 = 900 - targetSize2;
     targetSize2 = random(50,100);
     speed2 = random(5, 12);
     y2 = y2 = random(100,300);
