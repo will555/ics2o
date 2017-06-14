@@ -1,5 +1,9 @@
+
+var gif;
+
 function setup() {
   createCanvas(800, 400);
+  gif = loadGif('mj-laughing.gif');
 }
 
 function draw() {
@@ -13,7 +17,7 @@ var speed2 = random(5, 10);
 var targetSize2 = random(50,125);	
 var x3 = -100;
 var y3 = 200;   
-var speed3 = random(6, 15);
+var speed3 = random(6, 13);
 var targetSize3 = random(50,125);
 var x4 = 900;
 var y4 = 200;   
@@ -25,6 +29,7 @@ var gunX = 200;
 var lazerY = 256;
 var lazerS = -45;
 var lives = 3;
+var start = 0;
 
 
 
@@ -162,19 +167,19 @@ if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2
 }
 
 	
-if (score >= 80){   
+if (score >= 60){   
  target3();
    x3 = x3 + speed3;//move the target
 if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2 && mouseY > y3 - targetSize3/2 && mouseY < y3 + targetSize3/2) {    
     score = score + 1;
     x3 = 0 - targetSize3;
     targetSize3 = random(50,75);
-    speed3 = random(6, 15);
+    speed3 = random(6, 13);
     y3 = y3 = random(100,300);
 } 
 }
 
-if (score >= 125){   
+if (score >= 100){   
  target4();
    x4 = x4 - speed4;//move the target
 if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
@@ -186,6 +191,13 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
 } 
 }
 
+if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 355 && score <=0){
+	start = 1;
+	textSize(12);
+	lives = 3;
+    speed = random(2, 9);
+	x = -50 - targetSize;
+}
 	
 if (lives <= 0) {
     fill(59, 134, 255);
@@ -204,8 +216,36 @@ if (lives <= 0) {
     text("Restart",340,340);
     speed = 0;
     speed2 = 0;
-	x = 200;
-	x2 = 900;
+	speed3 = 0;
+	speed4 = 0;
+	x = 0;
+	x2 = 1000;
+	x3 = 0;
+	x3 = 1000;
+	y = 2000;
+	y2 = 2000;
+	y3 = 2000;
+	y4 = 2000;
+	if (lives <= 0 && score <= 0) {
+	image(gif, 100, 100);
+}
+}
+
+
+
+if (start <= 0) {
+    fill(255, 220, 125);
+    rect(0,0,800,400);
+    fill(255, 0, 0);
+    textSize(65);
+    text("Target Practice",175,141);
+    fill(0, 0, 0);
+    textSize(40);
+    fill(255, 0, 0);
+    rect(300,305,175,50);
+    fill(0, 0, 0);
+    textSize(30);
+    text("Start",355,340);
 }
 };
 
