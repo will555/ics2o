@@ -1,3 +1,5 @@
+
+
 function setup() {
   createCanvas(800, 400);
 }
@@ -26,17 +28,20 @@ var lazerY = 256;
 var lazerS = -45;
 var lives = 3;
 var start = 0;
+var red = 255;
+var blue = 255;
+var green = 255;
+var redG = 0;
+var blueG = 0;
+var greenG = 0;
 
-
-
-	
     function lazer() {
-    fill(255, 0, 0);
+    fill(red, green, blue);
    rect(mouseX+10,lazerY,10,94,30); 
 };
     function gun() {
     noStroke();
-     fill(0, 0, 0);
+     fill(redG, greenG, blueG);
     rect(mouseX+5,330,19,23);
     rect(mouseX,339,30,130);
     };
@@ -126,7 +131,7 @@ fill(255, 208, 0);
         lives = lives -1;
     }
 if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) {  
-   score = score + 1;
+    score = score + 1;
     x = 0 - targetSize;
     targetSize = random(50,125);
     speed = random(3, 10);
@@ -147,6 +152,8 @@ if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 3
    speed2 = random(5, 10);
    speed3 = random(6, 15);
    speed4 = random(8, 12);
+   x = 0;
+   y = 100;
    textSize(12);
 }
 	
@@ -161,7 +168,6 @@ if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2
     y2 = y2 = random(100,300);
 } 
 }
-
 	
 if (score >= 60){   
  target3();
@@ -192,7 +198,7 @@ if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 3
 	textSize(12);
 	lives = 3;
     speed = random(2, 9);
-	x = -50 - targetSize;
+	x = 0 - targetSize;
 }
 	
 if (lives <= 0) {
@@ -239,6 +245,65 @@ if (start <= 0) {
     fill(0, 0, 0);
     textSize(30);
     text("Start",355,340);
+}
+//lazer
+if (start <= 0) {
+//lowers the R of the RBG of the square
+	if (keyIsDown(87)) {
+		red = red - 5;
+    }
+//lowers the G of the RBG of the square 
+	if (keyIsDown(65)) {
+		green = green - 5;
+    }
+//lowers the B of the RBG of the square
+	if (keyIsDown(68)) {
+		blue = blue - 5;
+    }
+//makes the colour of the square white when "S" is pressed
+	if (keyIsDown(83)) {
+		red = 255;
+		green = 255;
+		blue = 255;
+    }
+//the colour of the square
+	fill(red, green, blue);
+	rect(75,200,150,150,29);
+//the size of the text
+	textSize(30);
+	fill(0,0,0)
+//the text above the square
+	text("Lazer Colour",70,185);
+}
+
+//Gun colour
+if (start <= 0) {
+//lowers the R of the RBG of the square
+	if (keyIsDown(37)) {
+		redG = redG + 5;
+    }
+//lowers the G of the RBG of the square 
+	if (keyIsDown(38)) {
+		greenG = greenG + 5;
+    }
+//lowers the B of the RBG of the square
+	if (keyIsDown(39)) {
+		blueG = blueG + 5;
+    }
+//makes the colour of the square white when "S" is pressed
+	if (keyIsDown(40)) {
+		redG = 0;
+		greenG = 0;
+		blueG = 0;
+    }
+//the colour of the square
+	fill(redG, greenG, blueG);
+	rect(550,200,150,150,29);
+//the size of the text
+	textSize(30);
+	fill(0,0,0)
+//the text above the square
+	text("Gun Colour",550,185);
 }
 };
 
