@@ -1,9 +1,5 @@
-
-var gif;
-
 function setup() {
   createCanvas(800, 400);
-  gif = loadGif('mj-laughing.gif');
 }
 
 function draw() {
@@ -226,9 +222,6 @@ if (lives <= 0) {
 	y2 = 2000;
 	y3 = 2000;
 	y4 = 2000;
-	if (lives <= 0 && score <= 0) {
-	image(gif, 100, 100);
-}
 }
 
 
