@@ -1,27 +1,20 @@
-html, body {
-  height: 100%;
-}
-
 body {  
 		font-family: Arial;
 		font-size: 19px;
 		
-		border-right-color:#b1e884;
+		border-right-color:#5499C7;
 		border-right-width:100px;
 		border-right-style:solid;
 		
-		border-top-color:#b1e884;
+		border-top-color:#5499C7;
 		border-top-width:50px;
 		border-top-style:solid;
-		
-		border-Bottom-color:#b1e884;
-		border-Bottom-width:50px;
-		border-Bottom-style:solid;
 
-		border-left-color:#b1e884;
+		border-left-color:#5499C7;
 		border-left-width:100px;
 		border-left-style:solid;
-    background-color: #474646;
+    		
+		background-color: #474646;
 	
 }
 h1 {
