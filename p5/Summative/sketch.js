@@ -3,7 +3,7 @@
 William Aitkens*/
 
 function setup() {
-  createCanvas(1100, 500);
+  createCanvas(1150, 500);
 }
 
 function draw() {
