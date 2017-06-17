@@ -1,10 +1,9 @@
-
+/*Summative Game
+19/06/2017
+William Aitkens*/
 
 function setup() {
   createCanvas(800, 400);
-  var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
-  cnv.position(x, y);
 }
 
 function draw() {
