@@ -240,11 +240,11 @@ if (start <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Target Practice",350,141);
+    text("Target Practice",32,141);
     fill(0, 0, 0);
     textSize(40);
     fill(255, 0, 0);
-    rect(433,250,200,100);
+    rect(433,150,175,100);
     fill(0, 0, 0);
     textSize(30);
     text("Start",488,340);
@@ -301,7 +301,7 @@ if (start <= 0) {
     }
 //the colour of the square
 	fill(redG, greenG, blueG);
-	rect(750,270,200,200,29);
+	rect(725,270,200,200,29);
 //the size of the text
 	textSize(30);
 	fill(0,0,0)
