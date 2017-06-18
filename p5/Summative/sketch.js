@@ -244,7 +244,7 @@ if (start <= 0) {
     fill(0, 0, 0);
     textSize(40);
     fill(255, 0, 0);
-    rect(433,340,175,50);
+    rect(433,300,175,50);
     fill(0, 0, 0);
     textSize(30);
     text("Start",488,340);
