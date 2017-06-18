@@ -30,7 +30,6 @@ var lazerY = 256;
 var lazerS = -45;
 var lives = 3;
 var start = 0;
-var how = 0;
 var red = 255;
 var blue = 255;
 var green = 255;
@@ -234,10 +233,7 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
     	speed = random(2, 9);
 	x = 0 - targetSize;
 }
-
-if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <= 0 && how <= 0){
-   how = 1;
-}
+	
 //creates the game over screen when lives are equal to zero
 if (lives <= 0) {
     fill(59, 134, 255);
@@ -272,26 +268,6 @@ if (lives <= 0) {
 	y4 = 2000;
 }
 	
-if (how > 0) {
-    fill(255, 200, 100);
-    rect(0,0,1100,500);
-    fill(255, 0, 0);
-    textSize(65);
-    text("How to Play",300,141);
-    fill(0, 0, 0);
-    textSize(25);
-    text("- Use your mouse to click on the Targets to destroy them.", 50, 175);
-    text("- Each time you hit a target your score will go up by one.", 50, 205);
-    text("- New targets will appear the higher your score gets.", 50, 230);
-    text("- Don't let the targets reach the other side or you will lose a life.", 50, 260);
-    text("- When your lives reach zero you lose.", 50, 285);
-    fill(0, 255, 0);
-    rect(433,305,175,50);
-    fill(0, 0, 0);
-    textSize(30);
-    text("Menu",480,340);
-};
-	
 //creates the start screen
 if (start <= 0) {
     fill(255, 220, 125);
@@ -306,10 +282,6 @@ if (start <= 0) {
     fill(0, 0, 0);
     textSize(30);
     text("Start",488,340);
-    fill(255, 0, 0);
-    rect(433,375,175,50);
-    fill(0, 0, 0);
-    text("How to Play",480,410);
 }
 	
 //Changes the color of the Lazer on the start screen	
