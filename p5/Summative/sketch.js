@@ -226,7 +226,7 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
 }
 } 
 //the start button for the start screen 
-if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && start = 0){
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && start <= 0){
 	start = 1;
 	textSize(20);
 	lives = 3;
@@ -234,7 +234,7 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 	x = 0 - targetSize;
 }
 
-if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start = 0){
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <= 0){
    start = 2;
 }
 //creates the game over screen when lives are equal to zero
@@ -272,7 +272,7 @@ if (lives <= 0) {
 }
 
 //creates the start screen
-if (start = 0) {
+if (start <= 0) {
     fill(255, 220, 125);
     rect(0,0,1100,500);
     fill(255, 0, 0);
@@ -352,7 +352,7 @@ if (start <= 0) {
 }
 };
 
-if (start = 2) {
+/*if (start = 2) {
     fill(255, 220, 125);
     rect(0,0,1100,500);
     fill(255, 0, 0);
@@ -370,5 +370,5 @@ if (start = 2) {
     fill(0, 0, 0);
     textSize(30);
     text("Menu",480,340);
-};	
+};*/	
 };
