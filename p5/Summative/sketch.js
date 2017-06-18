@@ -96,9 +96,9 @@ fill(15, 209, 21);
     	ellipse(345,481,231,131);//hills
 	ellipse(545,481,231,100);//hills
    	ellipse(745,481,231,131);//hills
-	ellipse(900,481,278,130);//hills
+	ellipse(930,450,278,130);//hills
 fill(255, 208, 0); 
-    ellipse(980,38,90,90);//sun
+    ellipse(990,38,90,90);//sun
 
        if (lazerY < -110) {
         lazerY = 380;
@@ -144,7 +144,7 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
 
 fill(0, 0, 0);
 text("Score:",950,35);
-text(score,985,35); 
+text(score,995,35); 
 text("lives:",20,35);
 text(lives,50,35);
 	
@@ -209,10 +209,10 @@ if (lives <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Game over",220,141);
+    text("Game over",450,141);
     fill(0, 0, 0);
     textSize(40);
-    text("Score:",300,250);
+    text("Score:",530,250);
     text(score,430,250); 
     fill(255, 0, 0);
     rect(300,305,175,50);
@@ -240,14 +240,14 @@ if (start <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Target Practice",175,141);
+    text("Target Practice",500,141);
     fill(0, 0, 0);
     textSize(40);
     fill(255, 0, 0);
-    rect(300,305,175,50);
+    rect(533,305,175,50);
     fill(0, 0, 0);
     textSize(30);
-    text("Start",355,340);
+    text("Start",588,340);
 }
 //lazer
 if (start <= 0) {
