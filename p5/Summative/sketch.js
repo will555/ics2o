@@ -250,7 +250,7 @@ if (lives <= 0) {
     fill(0, 0, 0);
     textSize(30);
     text("Restart",470,340);
-    fill(255, 0, 0);
+    fill(0, 255, 0);
     rect(433,375,175,50);
     fill(0, 0, 0);
     text("Menu",480,410);
