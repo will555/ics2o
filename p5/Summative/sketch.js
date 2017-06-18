@@ -221,7 +221,7 @@ if (lives <= 0) {
     text("Restart",470,340);
     fill(255, 0, 0);
     rect(433,400,175,50);
-    text("Menue",475,410);
+    text("Menu",475,410);
     	speed = 0;
     	speed2 = 0;
 	speed3 = 0;
