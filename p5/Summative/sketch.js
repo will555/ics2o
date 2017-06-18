@@ -96,7 +96,7 @@ fill(15, 209, 21);
     	ellipse(345,481,231,131);//hills
 	ellipse(545,481,231,100);//hills
    	ellipse(745,481,231,131);//hills
-	ellipse(930,450,278,130);//hills
+	ellipse(930,450,278,100);//hills
 fill(255, 208, 0); 
     ellipse(990,38,90,90);//sun
 
@@ -110,26 +110,26 @@ fill(255, 208, 0);
  gun(); 
     x = x + speed;//move the target
 
-    if (x > 900) {
+    if (x > 1133) {
         x = -100;
         y = random(100,400);
         lives = lives -1;
     }
     
     if (x2 < -100) {
-        x2 = 900 + targetSize2;
+        x2 = 1133 + targetSize2;
         y2 = random(100,400);
         lives = lives -1;
     }
     
-	if (x3 > 900) {
+	if (x3 > 1133) {
         x3 = -100;
         y3 = random(100,400);
         lives = lives -1;
     }
 	
 	if (x4 < -100) {
-        x4 = 900 + targetSize4;
+        x4 = 1133 + targetSize4;
         y4 = random(100,400);
         lives = lives -1;
     }
