@@ -226,7 +226,7 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
 }
 } 
 //the start button for the start screen 
-if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && score <=0){
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && start <=0){
 	start = 1;
 	textSize(20);
 	lives = 3;
@@ -234,6 +234,9 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 	x = 0 - targetSize;
 }
 
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <=0){
+   start = 2;
+}
 //creates the game over screen when lives are equal to zero
 if (lives <= 0) {
     fill(59, 134, 255);
@@ -261,7 +264,7 @@ if (lives <= 0) {
 	x = 0;
 	x2 = 1000;
 	x3 = 0;
-	x3 = 1000;
+	x4 = 1000;
 	y = 2000;
 	y2 = 2000;
 	y3 = 2000;
@@ -277,11 +280,15 @@ if (start <= 0) {
     text("Target Practice",305,141);
     fill(0, 0, 0);
     textSize(40);
-    fill(255, 0, 0);
+    fill(0, 255, 0);
     rect(433,305,175,50);
     fill(0, 0, 0);
     textSize(30);
     text("Start",488,340);
+    fill(255, 0, 0);
+    rect(433,375,175,50);
+    fill(0, 0, 0);
+    text("How to Play",480,410);
 }
 	
 //Changes the color of the Lazer on the start screen	
@@ -344,6 +351,24 @@ if (start <= 0) {
 	text("Gun Colour",750,260);
 }
 };
-	
+
+if (start = 2) {
+    fill(255, 220, 125);
+    rect(0,0,1100,500);
+    fill(255, 0, 0);
+    textSize(65);
+    text("How to Play",300,141);
+    fill(0, 0, 0);
+    textSize(25);
+    text("- Use your mouse to click on the Targets to destroy them.", 50, 150);
+    text("- Each time you hit a target your score will go up by one.", 50, 175);
+    text("- New targets will appear the higher your score gets.", 50, 200);
+    text("- Don't let the targets reach the other side or you will lose a life.", 50, 225);
+    text("- When your lives reach zero you lose.", 50, 250);
+    fill(0, 255, 0);
+    rect(433,305,175,50);
+    fill(0, 0, 0);
+    textSize(30);
+    text("Menu",480,340);
 	
 };
