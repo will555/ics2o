@@ -237,7 +237,6 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 
 if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <= 0){
    how = 1;
-   start = 1;
 }
 //creates the game over screen when lives are equal to zero
 if (lives <= 0) {
@@ -352,11 +351,9 @@ if (start <= 0) {
 //the text above the square
 	text("Gun Colour",750,260);
 }
-};
-
 if (how <= 1) {
 	
-    fill(255, 220, 125);
+    fill(255, 200, 100);
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
@@ -373,5 +370,8 @@ if (how <= 1) {
     fill(0, 0, 0);
     textSize(30);
     text("Menu",480,340);
-};	
+};
+};
+
+	
 };
