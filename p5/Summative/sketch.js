@@ -148,7 +148,7 @@ text(score,995,35);
 text("lives:",20,35);
 text(lives,50,35);
 	
-if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 355 && lives <=0){
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && lives <=0){
    lives = 3; 
    score = 0;
    speed = random(3, 10);
@@ -196,7 +196,7 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
 } 
 }
 
-if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 355 && score <=0){
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && score <=0){
 	start = 1;
 	textSize(12);
 	lives = 3;
@@ -215,7 +215,7 @@ if (lives <= 0) {
     text("Score:",530,250);
     text(score,430,250); 
     fill(255, 0, 0);
-    rect(300,305,175,50);
+    rect(433,305,175,50);
     fill(0, 0, 0);
     textSize(30);
     text("Restart",340,340);
@@ -240,7 +240,7 @@ if (start <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Target Practice",310,141);
+    text("Target Practice",305,141);
     fill(0, 0, 0);
     textSize(40);
     fill(255, 0, 0);
