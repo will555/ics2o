@@ -143,8 +143,8 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
 
 textSize(20);
 fill(0, 0, 0);
-text("Score:",900,35);
-text(score,950,35); 
+text("Score:",950,35);
+text(score,1000,35); 
 text("lives:",20,35);
 text(lives,70,35);
 	
