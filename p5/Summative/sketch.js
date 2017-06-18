@@ -220,7 +220,7 @@ if (lives <= 0) {
     textSize(30);
     text("Restart",470,340);
     fill(255, 0, 0);
-    rect(433,275,175,50);
+    rect(433,405,175,50);
     fill(0, 0, 0);
     text("Menu",480,410);
     	speed = 0;
