@@ -10,7 +10,7 @@ function draw() {
 var x = 200;
 var y = 200;   
 var speed = random(2, 9);
-var targetSize = random(50,125);
+var targetSize = random(70,150);
 var x2 = 1100;
 var y2 = 200;   
 var speed2 = random(5, 10);
@@ -18,11 +18,11 @@ var targetSize2 = random(50,125);
 var x3 = -100;
 var y3 = 200;   
 var speed3 = random(6, 13);
-var targetSize3 = random(50,125);
+var targetSize3 = random(100,175);
 var x4 = 1100;
 var y4 = 200;   
 var speed4 = random(8, 12);
-var targetSize4 = random(50,125);
+var targetSize4 = random(25,200);
 var sizeT = random(20-200);
 var score = 0;
 var gunX = 200;
@@ -102,7 +102,7 @@ fill(15, 209, 21);
    	ellipse(745,481,231,131);//hills
 	ellipse(930,500,278,100);//hills
 fill(255, 208, 0); 
-    	ellipse(990,38,120,120);//sun
+    	ellipse(990,38,150,150);//sun
 	
 	//Puts the lazer back in the gun after leaving the screen
        	if (lazerY < -110) {
@@ -148,7 +148,7 @@ gun();
 if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) {  
     score = score + 1;
     x = 0 - targetSize;
-    targetSize = random(50,125);
+    targetSize = random(70,150);
     speed = random(3, 10);
     y = y = random(100,400); 
 } 
@@ -189,7 +189,7 @@ x2 = x2 - speed2;
 if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {       
     score = score + 1;
     x2 = 1150 - targetSize2;
-    targetSize2 = random(70,100);
+    targetSize2 = random(50,125);
     speed2 = random(5, 10);
     y2 = y2 = random(100,400);
 } 
@@ -204,7 +204,7 @@ x3 = x3 + speed3;
 if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2 && mouseY > y3 - targetSize3/2 && mouseY < y3 + targetSize3/2) {    
     score = score + 1;
     x3 = 0 - targetSize3;
-    targetSize3 = random(50,75);
+    targetSize3 = random(100,175);
     speed3 = random(6, 13);
     y3 = y3 = random(100,400);
 } 
@@ -219,7 +219,7 @@ x4 = x4 - speed4;
 if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
     score = score + 1;
     x4 = 1150 - targetSize4;
-    targetSize4 = random(70,100);
+    targetSize4 = random(25,200);
     speed4 = random(8, 12);
     y4 = y4 = random(100,400);
 
