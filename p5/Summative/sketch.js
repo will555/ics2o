@@ -155,7 +155,7 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
 
 textSize(20);
 fill(0, 0, 0);
-text("Score:",930,35);
+text("Score:",940,35);
 text(score,1000,35); 
 text("lives:",20,35);
 text(lives,70,35);
@@ -243,8 +243,8 @@ if (lives <= 0) {
     text("Game over",355,141);
     fill(0, 0, 0);
     textSize(40);
-    text("Score:",450,250);
-    text(score,570,250); 
+    text("Score:",425,250);
+    text(score,545,250); 
     fill(255, 0, 0);
     rect(433,305,175,50);
     fill(0, 0, 0);
