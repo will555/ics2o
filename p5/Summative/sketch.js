@@ -11,7 +11,7 @@ var x = 200;
 var y = 200;   
 var speed = random(2, 9);
 var targetSize = random(50,125);
-var x2 = 900;
+var x2 = 1100;
 var y2 = 200;   
 var speed2 = random(5, 10);
 var targetSize2 = random(50,125);	
@@ -19,7 +19,7 @@ var x3 = -100;
 var y3 = 200;   
 var speed3 = random(6, 13);
 var targetSize3 = random(50,125);
-var x4 = 900;
+var x4 = 1100;
 var y4 = 200;   
 var speed4 = random(8, 12);
 var targetSize4 = random(50,125);
@@ -43,9 +43,9 @@ var greenG = 0;
 };
     function gun() {
     noStroke();
-     fill(redG, greenG, blueG);
-    rect(mouseX+5,330,19,23);
-    rect(mouseX,339,30,130);
+    fill(redG, greenG, blueG);
+    	rect(mouseX+5,430,19,23);
+    	rect(mouseX,439,30,130);
     };
     background(255, 255, 255);
   
@@ -91,16 +91,16 @@ background(148, 218, 255);//the sky
 target();//creates target
 noStroke();
 fill(15, 209, 21);
-    ellipse(34,378,233,122);//hills
-    ellipse(189,381,220,84);//hills
-    ellipse(345,381,231,131);//hills
-	ellipse(545,381,231,100);//hills
-    ellipse(745,381,231,131);//hills
+    	ellipse(34,478,233,122);//hills
+    	ellipse(189,481,220,84);//hills
+    	ellipse(345,481,231,131);//hills
+	ellipse(545,481,231,100);//hills
+   	ellipse(745,481,231,131);//hills
 fill(255, 208, 0); 
-    ellipse(770,38,90,90);//sun
+    ellipse(1070,38,90,90);//sun
 
        if (lazerY < -110) {
-        lazerY = 280;
+        lazerY = 380;
     }
     if (mouseIsPressed){
          lazer();
@@ -111,25 +111,25 @@ fill(255, 208, 0);
 
     if (x > 900) {
         x = -100;
-        y = random(100,300);
+        y = random(100,400);
         lives = lives -1;
     }
     
     if (x2 < -100) {
         x2 = 900 + targetSize2;
-        y2 = random(100,300);
+        y2 = random(100,400);
         lives = lives -1;
     }
     
 	if (x3 > 900) {
         x3 = -100;
-        y3 = random(100,300);
+        y3 = random(100,400);
         lives = lives -1;
     }
 	
 	if (x4 < -100) {
         x4 = 900 + targetSize4;
-        y4 = random(100,300);
+        y4 = random(100,400);
         lives = lives -1;
     }
 if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) {  
@@ -137,7 +137,7 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
     x = 0 - targetSize;
     targetSize = random(50,125);
     speed = random(3, 10);
-    y = y = random(100,300); 
+    y = y = random(100,400); 
 } 
 
 
@@ -167,7 +167,7 @@ if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2
     x2 = 1000 - targetSize2;
     targetSize2 = random(70,100);
     speed2 = random(5, 10);
-    y2 = y2 = random(100,300);
+    y2 = y2 = random(100,400);
 } 
 }
 	
@@ -179,7 +179,7 @@ if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2
     x3 = 0 - targetSize3;
     targetSize3 = random(50,75);
     speed3 = random(6, 13);
-    y3 = y3 = random(100,300);
+    y3 = y3 = random(100,400);
 } 
 }
 
@@ -191,7 +191,7 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
     x4 = 1000 - targetSize4;
     targetSize4 = random(70,100);
     speed4 = random(8, 12);
-    y4 = y4 = random(100,300);
+    y4 = y4 = random(100,400);
 } 
 }
 
@@ -205,7 +205,7 @@ if (mouseIsPressed && mouseX > 300 && mouseX < 475 && mouseY > 305 && mouseY < 3
 	
 if (lives <= 0) {
     fill(59, 134, 255);
-    rect(0,0,800,400);
+    rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
     text("Game over",220,141);
@@ -236,7 +236,7 @@ if (lives <= 0) {
 
 if (start <= 0) {
     fill(255, 220, 125);
-    rect(0,0,800,400);
+    rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
     text("Target Practice",175,141);
