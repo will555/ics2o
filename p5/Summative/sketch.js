@@ -237,6 +237,7 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 
 if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <= 0){
    how = 1;
+   start = 1;
 }
 //creates the game over screen when lives are equal to zero
 if (lives <= 0) {
@@ -354,6 +355,7 @@ if (start <= 0) {
 };
 
 if (how <= 1) {
+	
     fill(255, 220, 125);
     rect(0,0,1100,500);
     fill(255, 0, 0);
