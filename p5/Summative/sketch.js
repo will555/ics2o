@@ -243,7 +243,7 @@ if (lives <= 0) {
     text("Game over",355,141);
     fill(0, 0, 0);
     textSize(40);
-    text("Score:",425,250);
+    text("Score:",415,250);
     text(score,545,250); 
     fill(255, 0, 0);
     rect(433,305,175,50);
@@ -274,7 +274,7 @@ if (start <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Target Practice",305,141);
+    text("Target Practice",300,141);
     fill(0, 0, 0);
     textSize(40);
     fill(0, 255, 0);
