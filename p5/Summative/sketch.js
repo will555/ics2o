@@ -188,7 +188,7 @@ x2 = x2 - speed2;
 //lets you hit the target
 if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {       
     score = score + 1;
-    x2 = 1150 - targetSize2;
+    x2 = 1200 - targetSize2;
     targetSize2 = random(50,125);
     speed2 = random(5, 10);
     y2 = y2 = random(100,400);
@@ -218,7 +218,7 @@ x4 = x4 - speed4;
 //lets you hit the target
 if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
     score = score + 1;
-    x4 = 1150 - targetSize4;
+    x4 = 1200 - targetSize4;
     targetSize4 = random(25,200);
     speed4 = random(8, 12);
     y4 = y4 = random(100,400);
