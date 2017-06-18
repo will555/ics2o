@@ -370,5 +370,5 @@ if (start = 2) {
     fill(0, 0, 0);
     textSize(30);
     text("Menu",480,340);
-	
+};	
 };
