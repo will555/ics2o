@@ -351,6 +351,9 @@ if (start <= 0) {
 //the text above the square
 	text("Gun Colour",750,260);
 }
+
+};
+
 if (how <= 1) {
 	
     fill(255, 200, 100);
@@ -370,8 +373,5 @@ if (how <= 1) {
     fill(0, 0, 0);
     textSize(30);
     text("Menu",480,340);
-};
-};
-
-	
+};	
 };
