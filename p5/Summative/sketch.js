@@ -174,7 +174,7 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 }
 //Menu Button for Game Over Screen
 if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && lives <=0){
-   score = 1;
+   start = 0;
 }
 
 //creates the seccond target after getting a score of 20
