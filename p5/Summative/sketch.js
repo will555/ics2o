@@ -165,7 +165,7 @@ if (score >= 20){
    x2 = x2 - speed2;//move the target
 if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {    
     score = score + 1;
-    x2 = 1100 - targetSize2;
+    x2 = 1150 - targetSize2;
     targetSize2 = random(70,100);
     speed2 = random(5, 10);
     y2 = y2 = random(100,400);
@@ -189,7 +189,7 @@ if (score >= 100){
    x4 = x4 - speed4;//move the target
 if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
     score = score + 1;
-    x4 = 1100 - targetSize4;
+    x4 = 1150 - targetSize4;
     targetSize4 = random(70,100);
     speed4 = random(8, 12);
     y4 = y4 = random(100,400);
@@ -213,12 +213,12 @@ if (lives <= 0) {
     fill(0, 0, 0);
     textSize(40);
     text("Score:",380,250);
-    text(score,530,250); 
+    text(score,570,250); 
     fill(255, 0, 0);
     rect(433,305,175,50);
     fill(0, 0, 0);
     textSize(30);
-    text("Restart",465,340);
+    text("Restart",470,340);
     speed = 0;
     speed2 = 0;
 	speed3 = 0;
