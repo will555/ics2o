@@ -143,8 +143,8 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
 
 textSize(20);
 fill(0, 0, 0);
-text("Score:",950,35);
-text(score,995,35); 
+text("Score:",900,35);
+text(score,950,35); 
 text("lives:",20,35);
 text(lives,70,35);
 	
@@ -220,8 +220,9 @@ if (lives <= 0) {
     textSize(30);
     text("Restart",470,340);
     fill(255, 0, 0);
-    rect(433,400,175,50);
-    text("Menu",475,410);
+    rect(433,275,175,50);
+    fill(0, 0, 0);
+    text("Menu",480,410);
     	speed = 0;
     	speed2 = 0;
 	speed3 = 0;
