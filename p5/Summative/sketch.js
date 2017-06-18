@@ -240,14 +240,14 @@ if (start <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Target Practice",500,141);
+    text("Target Practice",400,141);
     fill(0, 0, 0);
     textSize(40);
     fill(255, 0, 0);
-    rect(533,305,175,50);
+    rect(433,305,175,50);
     fill(0, 0, 0);
     textSize(30);
-    text("Start",588,340);
+    text("Start",488,340);
 }
 //lazer
 if (start <= 0) {
@@ -271,7 +271,7 @@ if (start <= 0) {
     }
 //the colour of the square
 	fill(red, green, blue);
-	rect(75,200,150,150,29);
+	rect(130,300,150,150,29);
 //the size of the text
 	textSize(30);
 	fill(0,0,0)
@@ -301,7 +301,7 @@ if (start <= 0) {
     }
 //the colour of the square
 	fill(redG, greenG, blueG);
-	rect(550,200,150,150,29);
+	rect(783,300,150,150,29);
 //the size of the text
 	textSize(30);
 	fill(0,0,0)
