@@ -30,6 +30,7 @@ var lazerY = 256;
 var lazerS = -45;
 var lives = 3;
 var start = 0;
+var how = 0;
 var red = 255;
 var blue = 255;
 var green = 255;
@@ -235,7 +236,7 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 }
 
 if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <= 0){
-   start = 2;
+   how = 1;
 }
 //creates the game over screen when lives are equal to zero
 if (lives <= 0) {
@@ -352,7 +353,7 @@ if (start <= 0) {
 }
 };
 
-/*if (start = 2) {
+if (how <= 1) {
     fill(255, 220, 125);
     rect(0,0,1100,500);
     fill(255, 0, 0);
@@ -360,15 +361,15 @@ if (start <= 0) {
     text("How to Play",300,141);
     fill(0, 0, 0);
     textSize(25);
-    text("- Use your mouse to click on the Targets to destroy them.", 50, 150);
-    text("- Each time you hit a target your score will go up by one.", 50, 175);
-    text("- New targets will appear the higher your score gets.", 50, 200);
-    text("- Don't let the targets reach the other side or you will lose a life.", 50, 225);
-    text("- When your lives reach zero you lose.", 50, 250);
+    text("- Use your mouse to click on the Targets to destroy them.", 50, 175);
+    text("- Each time you hit a target your score will go up by one.", 50, 205);
+    text("- New targets will appear the higher your score gets.", 50, 230);
+    text("- Don't let the targets reach the other side or you will lose a life.", 50, 260);
+    text("- When your lives reach zero you lose.", 50, 285);
     fill(0, 255, 0);
     rect(433,305,175,50);
     fill(0, 0, 0);
     textSize(30);
     text("Menu",480,340);
-};*/	
+};	
 };
