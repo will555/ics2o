@@ -226,7 +226,7 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
 }
 } 
 //the start button for the start screen 
-if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && start <=0){
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && score <=0){
 	start = 1;
 	textSize(20);
 	lives = 3;
