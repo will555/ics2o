@@ -165,7 +165,7 @@ if (score >= 20){
    x2 = x2 - speed2;//move the target
 if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {    
     score = score + 1;
-    x2 = 1000 - targetSize2;
+    x2 = 1100 - targetSize2;
     targetSize2 = random(70,100);
     speed2 = random(5, 10);
     y2 = y2 = random(100,400);
@@ -189,7 +189,7 @@ if (score >= 100){
    x4 = x4 - speed4;//move the target
 if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
     score = score + 1;
-    x4 = 1000 - targetSize4;
+    x4 = 1100 - targetSize4;
     targetSize4 = random(70,100);
     speed4 = random(8, 12);
     y4 = y4 = random(100,400);
@@ -200,7 +200,7 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 	start = 1;
 	textSize(12);
 	lives = 3;
-    speed = random(2, 9);
+    	speed = random(2, 9);
 	x = 0 - targetSize;
 }
 	
@@ -209,16 +209,16 @@ if (lives <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Game over",450,141);
+    text("Game over",400,141);
     fill(0, 0, 0);
     textSize(40);
-    text("Score:",530,250);
-    text(score,430,250); 
+    text("Score:",400,250);
+    text(score,450,250); 
     fill(255, 0, 0);
     rect(433,305,175,50);
     fill(0, 0, 0);
     textSize(30);
-    text("Restart",340,340);
+    text("Restart",460,340);
     speed = 0;
     speed2 = 0;
 	speed3 = 0;
@@ -276,7 +276,7 @@ if (start <= 0) {
 	textSize(30);
 	fill(0,0,0)
 //the text above the square
-	text("Lazer Colour",125,260);
+	text("Lazer Colour",130,260);
 }
 
 //Gun colour
