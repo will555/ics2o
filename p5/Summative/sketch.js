@@ -179,10 +179,12 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 4
 
 //creates the seccond target after getting a score of 20
 if (score >= 20){   
- target2();
-   x2 = x2 - speed2;//move the target
+y2 = y2 = random(100,400);
+target2();
+//move the target	
+x2 = x2 - speed2;
 //lets you hit the target
-if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {    
+if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {       
     score = score + 1;
     x2 = 1150 - targetSize2;
     targetSize2 = random(70,100);
@@ -193,8 +195,10 @@ if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2
 	
 //creates the third target after getting a score of 60	
 if (score >= 60){   
- target3();
-   x3 = x3 + speed3;//move the target
+y3 = y3 = random(100,400);
+target3();
+//move the target	
+x3 = x3 + speed3;
 //lets you hit the target 
 if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2 && mouseY > y3 - targetSize3/2 && mouseY < y3 + targetSize3/2) {    
     score = score + 1;
@@ -207,8 +211,10 @@ if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2
 	
 //creates the fourth target after getting a score of 100	
 if (score >= 100){   
- target4();
-   x4 = x4 - speed4;//move the target
+y4 = y4 = random(100,400);
+target4();
+//move the target	
+x4 = x4 - speed4;
 //lets you hit the target
 if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
     score = score + 1;
@@ -339,4 +345,20 @@ if (start <= 0) {
 }
 };
 
+if(	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 };
