@@ -240,11 +240,11 @@ if (start <= 0) {
     rect(0,0,1100,500);
     fill(255, 0, 0);
     textSize(65);
-    text("Target Practice",32,141);
+    text("Target Practice",332,141);
     fill(0, 0, 0);
     textSize(40);
     fill(255, 0, 0);
-    rect(433,150,175,100);
+    rect(433,350,175,50);
     fill(0, 0, 0);
     textSize(30);
     text("Start",488,340);
@@ -276,7 +276,7 @@ if (start <= 0) {
 	textSize(30);
 	fill(0,0,0)
 //the text above the square
-	text("Lazer Colour",100,200);
+	text("Lazer Colour",120,300);
 }
 
 //Gun colour
@@ -306,7 +306,7 @@ if (start <= 0) {
 	textSize(30);
 	fill(0,0,0)
 //the text above the square
-	text("Gun Colour",780,200);
+	text("Gun Colour",750,300);
 }
 };
 
