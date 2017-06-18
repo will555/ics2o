@@ -37,19 +37,22 @@ var redG = 0;
 var blueG = 0;
 var greenG = 0;
 
-    function lazer() {
-    fill(red, green, blue);
+	//Fuunction for creating the lazer
+    	function lazer() {
+   fill(red, green, blue);
    rect(mouseX+10,lazerY,10,94,30); 
-};
-    function gun() {
+	};
+	
+	//Function for creating the gun
+    	function gun() {
     noStroke();
     fill(redG, greenG, blueG);
-    	rect(mouseX+5,430,19,23);
-    	rect(mouseX,439,30,130);
-    };
-    background(255, 255, 255);
-  
-    function target() {
+    rect(mouseX+5,430,19,23);
+    rect(mouseX,439,30,130);
+    	};
+	
+  	//Target #1 function
+    	function target() {
     fill(255, 0, 0);
         ellipse(x,y,targetSize,targetSize);
     fill(255, 255, 255);
@@ -57,8 +60,8 @@ var greenG = 0;
     fill(255, 0, 0);
         ellipse(x,y,targetSize/2.20,targetSize/-2.20);
     };
-    
-    function target2() {
+    	//Target #2 function
+    	function target2() {
     fill(0, 50, 255);fill(0, 50, 255);
         ellipse(x2,y2,targetSize2,targetSize2);
     fill(255, 255, 255);
@@ -66,7 +69,7 @@ var greenG = 0;
     fill(0, 50, 255);
         ellipse(x2,y2,targetSize2/2.20,targetSize2/-2.20);
     };
-	
+	//Target #3 function
 	function target3() {
     fill(255, 0, 255);
         ellipse(x3,y3,targetSize3,targetSize3);
@@ -75,8 +78,8 @@ var greenG = 0;
     fill(255, 0, 255);
         ellipse(x3,y3,targetSize3/2.20,targetSize3/-2.20);
     };
-	
-		function target4() {
+	//Target #4 function
+	function target4() {
     fill(255, 94, 0);
         ellipse(x4,y4,targetSize4,targetSize4);
     fill(255, 255, 255);
@@ -86,9 +89,10 @@ var greenG = 0;
     };
 	
 draw = function() {
-
-background(148, 218, 255);//the sky
-target();//creates target
+//the sky
+background(148, 218, 255);
+//creates target
+target();
 noStroke();
 fill(15, 209, 21);
     	ellipse(34,478,233,122);//hills
@@ -98,41 +102,49 @@ fill(15, 209, 21);
    	ellipse(745,481,231,131);//hills
 	ellipse(930,500,278,100);//hills
 fill(255, 208, 0); 
-    ellipse(990,38,120,120);//sun
-
-       if (lazerY < -110) {
+    	ellipse(990,38,120,120);//sun
+	
+	//Puts the lazer back in the gun after leaving the screen
+       	if (lazerY < -110) {
         lazerY = 380;
     }
+	
+//creates the Lazer when the mouse is pressed
     if (mouseIsPressed){
          lazer();
    lazerY = lazerY + lazerS;
-    }  
- gun(); 
-    x = x + speed;//move the target
-
+    } 
+	
+//creats the Gun
+gun(); 
+	//move the target
+	x = x + speed;
+	
+	//This code makes it so you lose a life when the target goes off the screen
     if (x > 1133) {
         x = -100;
         y = random(100,400);
         lives = lives -1;
     }
-    
+    	//This code makes it so you lose a life when the target goes off the screen
     if (x2 < -100) {
         x2 = 1133 + targetSize2;
         y2 = random(100,400);
         lives = lives -1;
     }
-    
-	if (x3 > 1133) {
+        //This code makes it so you lose a life when the target goes off the screen
+    if (x3 > 1133) {
         x3 = -100;
         y3 = random(100,400);
         lives = lives -1;
     }
-	
-	if (x4 < -100) {
+	//This code makes it so you lose a life when the target goes off the screen
+     if (x4 < -100) {
         x4 = 1133 + targetSize4;
         y4 = random(100,400);
         lives = lives -1;
     }
+//lets you hit the target
 if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && mouseY > y - targetSize/2 && mouseY < y + targetSize/2) {  
     score = score + 1;
     x = 0 - targetSize;
@@ -143,11 +155,12 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
 
 textSize(20);
 fill(0, 0, 0);
-text("Score:",925,35);
-text(score,1005,35); 
+text("Score:",930,35);
+text(score,1000,35); 
 text("lives:",20,35);
 text(lives,70,35);
-	
+
+//restart Button for Game over screen
 if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && lives <=0){
    lives = 3; 
    score = 0;
@@ -159,10 +172,16 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
    y = 100;
    textSize(12);
 }
-	
+//Menu Button for Game Over Screen
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && lives <=0){
+   score = 1;
+}
+
+//creates the seccond target after getting a score of 20
 if (score >= 20){   
  target2();
    x2 = x2 - speed2;//move the target
+//lets you hit the target
 if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2 && mouseY > y2 - targetSize2/2 && mouseY < y2 + targetSize2/2) {    
     score = score + 1;
     x2 = 1150 - targetSize2;
@@ -172,9 +191,11 @@ if (mouseIsPressed && mouseX > x2 - targetSize2/2 && mouseX < x2 + targetSize2/2
 } 
 }
 	
+//creates the third target after getting a score of 60	
 if (score >= 60){   
  target3();
    x3 = x3 + speed3;//move the target
+//lets you hit the target 
 if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2 && mouseY > y3 - targetSize3/2 && mouseY < y3 + targetSize3/2) {    
     score = score + 1;
     x3 = 0 - targetSize3;
@@ -183,10 +204,12 @@ if (mouseIsPressed && mouseX > x3 - targetSize3/2 && mouseX < x3 + targetSize3/2
     y3 = y3 = random(100,400);
 } 
 }
-
+	
+//creates the fourth target after getting a score of 100	
 if (score >= 100){   
  target4();
    x4 = x4 - speed4;//move the target
+//lets you hit the target
 if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2 && mouseY > y4 - targetSize4/2 && mouseY < y4 + targetSize4/2) {    
     score = score + 1;
     x4 = 1150 - targetSize4;
@@ -196,6 +219,7 @@ if (mouseIsPressed && mouseX > x4 - targetSize4/2 && mouseX < x2 + targetSize4/2
 } 
 }
 
+//the start button for the start screen 
 if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 355 && score <=0){
 	start = 1;
 	textSize(20);
@@ -203,7 +227,8 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
     	speed = random(2, 9);
 	x = 0 - targetSize;
 }
-	
+
+//creates the game over screen when lives are equal to zero
 if (lives <= 0) {
     fill(59, 134, 255);
     rect(0,0,1100,500);
@@ -237,8 +262,7 @@ if (lives <= 0) {
 	y4 = 2000;
 }
 
-
-
+//creates the start screen
 if (start <= 0) {
     fill(255, 220, 125);
     rect(0,0,1100,500);
@@ -253,7 +277,8 @@ if (start <= 0) {
     textSize(30);
     text("Start",488,340);
 }
-//lazer
+	
+//Changes the color of the Lazer on the start screen	
 if (start <= 0) {
 //lowers the R of the RBG of the square
 	if (keyIsDown(87)) {
@@ -283,7 +308,7 @@ if (start <= 0) {
 	text("Lazer Colour",130,260);
 }
 
-//Gun colour
+//Changes the colour of the gun on the start screen
 if (start <= 0) {
 //lowers the R of the RBG of the square
 	if (keyIsDown(37)) {
