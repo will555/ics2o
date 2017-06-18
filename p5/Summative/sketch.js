@@ -214,14 +214,14 @@ if (lives <= 0) {
     textSize(40);
     text("Score:",450,250);
     text(score,570,250); 
-    
+    fill(255, 0, 0);
     rect(433,305,175,50);
     fill(0, 0, 0);
     textSize(30);
     text("Restart",470,340);
     fill(255, 0, 0);
-    rect(433,355,175,50);
-    text("Menue",475,340);
+    rect(433,400,175,50);
+    text("Menue",475,410);
     	speed = 0;
     	speed2 = 0;
 	speed3 = 0;
