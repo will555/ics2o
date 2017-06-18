@@ -235,7 +235,7 @@ if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 305 && mouseY < 3
 	x = 0 - targetSize;
 }
 
-if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <= 0){
+if (mouseIsPressed && mouseX > 433 && mouseX < 608 && mouseY > 375 && mouseY < 425 && start <= 0 && how <= 0){
    how = 1;
 }
 //creates the game over screen when lives are equal to zero
