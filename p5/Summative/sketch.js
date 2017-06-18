@@ -96,9 +96,9 @@ fill(15, 209, 21);
     	ellipse(345,481,231,131);//hills
 	ellipse(545,481,231,100);//hills
    	ellipse(745,481,231,131);//hills
-	ellipse(900,481,150,278);//hills
+	ellipse(900,481,278,130);//hills
 fill(255, 208, 0); 
-    ellipse(970,38,90,90);//sun
+    ellipse(980,38,90,90);//sun
 
        if (lazerY < -110) {
         lazerY = 380;
@@ -143,7 +143,7 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
 
 
 fill(0, 0, 0);
-text("Score:",975,35);
+text("Score:",950,35);
 text(score,985,35); 
 text("lives:",20,35);
 text(lives,50,35);
