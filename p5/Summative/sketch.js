@@ -98,7 +98,7 @@ fill(15, 209, 21);
    	ellipse(745,481,231,131);//hills
 	ellipse(930,500,278,100);//hills
 fill(255, 208, 0); 
-    ellipse(990,38,90,90);//sun
+    ellipse(990,38,120,120);//sun
 
        if (lazerY < -110) {
         lazerY = 380;
@@ -143,8 +143,8 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
 
 textSize(20);
 fill(0, 0, 0);
-text("Score:",950,35);
-text(score,1000,35); 
+text("Score:",925,35);
+text(score,1005,35); 
 text("lives:",20,35);
 text(lives,70,35);
 	
@@ -220,7 +220,7 @@ if (lives <= 0) {
     textSize(30);
     text("Restart",470,340);
     fill(255, 0, 0);
-    rect(433,405,175,50);
+    rect(433,375,175,50);
     fill(0, 0, 0);
     text("Menu",480,410);
     	speed = 0;
