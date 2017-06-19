@@ -37,7 +37,7 @@ var redG = 0;
 var blueG = 0;
 var greenG = 0;
 
-	//Fuunction for creating the lazer
+	//Function for creating the lazer
     	function lazer() {
    fill(red, green, blue);
    rect(mouseX+10,lazerY,10,94,30); 
@@ -153,10 +153,13 @@ if (mouseIsPressed && mouseX > x - targetSize/2 && mouseX < x + targetSize/2 && 
     y = y = random(100,400); 
 } 
 
+	
 textSize(20);
 fill(0, 0, 0);
+//shows the score in the top right corner
 text("Score:",940,35);
-text(score,1000,35); 
+text(score,1000,35);
+//shows the lives in the top lest corner
 text("lives:",20,35);
 text(lives,70,35);
 
